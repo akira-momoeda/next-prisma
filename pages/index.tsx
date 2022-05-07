@@ -4,6 +4,7 @@ import { GetServerSideProps } from "next";
 import styles from "../styles/Movie.module.scss";
 import Image from "next/image";
 import deleteIcon from "../public/deleteIcon.svg";
+import { BaseButton } from "../components/BaseButton";
 
 import { PrismaClient } from "@prisma/client";
 import Router from "next/router";
@@ -36,9 +37,10 @@ export const Movie: React.FC<{ data: Movie[] }> = ({ data }) => {
 	return (
 		<>
 			<h2 className={styles.title}>Movie list</h2>
-			<button className={styles.button} onClick={routeCreate}>
+			{/* <button className={styles.button} onClick={routeCreate}>
 				Add Movie
-			</button>
+			</button> */}
+			<BaseButton label={"Add Movie"} onClick={routeCreate} />
 			<ul className={styles.movieList}>
 				{movies.map((movie: Movie) => {
 					return (
