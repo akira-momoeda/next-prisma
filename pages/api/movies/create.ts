@@ -8,8 +8,6 @@ export const create = async (
 	res: NextApiResponse
 ): Promise<void> => {
 	const data = JSON.parse(req.body);
-	console.log(data, "data");
-
 	const createMovie = await prisma.movie.create({
 		data,
 	});
