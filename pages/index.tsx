@@ -36,10 +36,7 @@ export const Movie: React.FC<{ data: Movie[] }> = ({ data }) => {
 
 	return (
 		<>
-			<h2 className={styles.title}>Movie list</h2>
-			{/* <button className={styles.button} onClick={routeCreate}>
-				Add Movie
-			</button> */}
+			<h2 className={styles.title}>Movieリスト</h2>
 			<BaseButton label={"Add Movie"} onClick={routeCreate} />
 			<ul className={styles.movieList}>
 				{movies.map((movie: Movie) => {

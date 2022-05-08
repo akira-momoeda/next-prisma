@@ -7,9 +7,10 @@ type Props = {
 };
 
 export const BaseButton = (props: Props) => {
+	const { label, onClick } = props;
 	return (
-		<button className={styles.button} onClick={props.onClick}>
-			{props.label}
+		<button className={styles.button} onClick={onClick}>
+			{label}
 		</button>
 	);
 };
